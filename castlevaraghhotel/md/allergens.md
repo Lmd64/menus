@@ -1,4 +1,4 @@
-# Allergens Menu
+# Castle Varagh Hotel Allergens Menu
 
 1 Cereals containing gluten - 2 Crustaceans - 3 Eggs - 4 Fish - 5 Peanuts - 6 Soybeans - 7 Milk - 8 Nuts - 9 Celery - 10 Mustard - 11 Sesame seeds - 12 Sulphur dioxide & sulphites - 13 Lupin - 14 Molluscs
 

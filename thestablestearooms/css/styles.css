@@ -1,0 +1,542 @@
+@font-face {
+   font-family: "Cinzel", serif;
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+   font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+   font-family: "Cinzel", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+:root {
+  --ink: #003b49;
+  --cream: #f0e6d8;
+  --warm: #e8d5c4;
+  --gold: #33626d;
+  --gold-light: #506b67;
+  --rule: #7a9da5;
+  --muted: #555;
+  --section-bg: #f8f0e8;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--ink);
+   font-family: "Cinzel", serif;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* ── Nav ── */
+nav {
+  position: fixed;
+  top: 0;
+  width:100%;
+  z-index: 100;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-bottom: 2px solid var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--rule);
+  text-decoration: none;
+   font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  padding: 14px 22px;
+  transition: color 0.2s, background 0.2s;
+  border-right: 1px solid #1a4a58;
+}
+nav a:first-child { border-left: 1px solid #1a4a58; }
+nav a:hover { color: var(--gold-light); background: #1a4a58; }
+nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
+
+/* ── Page header ── */
+.site-header {
+  text-align: center;
+  padding: 10px 24px 10px;
+  background: var(--ink);
+  color: var(--cream);
+  position: sticky;
+  top: var(--nav-h, 44px);
+  z-index: 99;
+}
+.site-header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  /*background: radial-gradient(ellipse at 50% 120%, #3a3020 0%, transparent 70%);*/
+  pointer-events: none;
+}
+.header-ornament {
+  display: block;
+  font-size: 1.3rem;
+  color: var(--gold);
+  letter-spacing: 0.3em;
+  margin-bottom: 16px;
+   font-family: "Cinzel", serif;
+  font-weight: 300;
+}
+.site-header h1 {
+   font-family: "Cinzel", serif;
+  font-size: clamp(1.2rem, 6vw, 1.6rem);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+.site-header .ampersand {
+  font-style: italic;
+  color: var(--gold-light);
+}
+.site-header .subtitle {
+   font-family: "Cinzel", serif;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: var(--rule);
+  margin-top: 8px;
+  letter-spacing: 0.06em;
+}
+.header-rule {
+  width: 80px;
+  height: 1px;
+  background: var(--gold);
+  margin: 20px auto 0;
+}
+
+/* ── Menu wrapper ── */
+.menus {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 20px 80px;
+}
+
+/* ── Individual menu ── */
+.menu {
+  margin-top: 70px;
+  animation: fadeUp 0.5s ease both;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.menu-header {
+  text-align: center;
+  padding: 20px 24px 20px;
+  border: 1px solid var(--rule);
+  background: var(--ink);
+  color: var(--cream);
+  position: relative;
+  margin-bottom: 0;
+}
+
+.menu-header::before,
+.menu-header::after {
+  content: '◆';
+  color: var(--gold);
+  font-size: 0.55rem;
+  position: absolute;
+  top: 12px;
+}
+.menu-header::before { left: 16px; }
+.menu-header::after  { right: 16px; }
+
+.menu-eyebrow {
+   font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+.menu-header h2 {
+   font-family: "Cinzel", serif;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  line-height: 1.2;
+}
+
+.menu-header .menu-note {
+   font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--rule);
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+
+h3 .menu-note {
+   font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--rule);
+  margin-top: 10px;
+  letter-spacing: 0.03em;
+}
+
+.menu-subnote {
+   font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--rule);
+  margin-top: 10px;
+  font-style: italic;
+  letter-spacing: 0.03em;
+}
+
+.menu-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  color: var(--gold-light);
+}
+.menu-chevron-icon {
+  width: 16px;
+  height: 10px;
+  transition: transform 0.25s ease;
+}
+.menu--collapsed .menu-chevron-icon {
+  transform: rotate(-90deg);
+}
+
+.menu-body {
+  border: 1px solid var(--rule);
+  border-top: none;
+  background: var(--section-bg);
+  padding: 0 36px 40px;
+  overflow: hidden;
+  transition: height 0.25s ease;
+}
+
+/* ── Sections ── */
+.section {
+  padding-top: 40px;
+}
+
+.section + .section {
+  border-top: 1px solid var(--rule);
+  margin-top: 36px;
+  padding-top: 36px;
+}
+
+.section-title {
+   font-family: "Cinzel", serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-align: center;
+  margin-bottom: 6px;
+  color: var(--ink);
+}
+
+.section-title-rule {
+  display: flex;
+  align-items: center;
+  font-size: 1.25em;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+.section-title-rule .title-line {
+  flex: 1;
+  height: 1px;
+}
+.section-title-rule span {
+   font-family: "Cinzel", serif;
+  font-size: 1.4em;
+  font-weight: 600;
+  color: var(--ink);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.section-note {
+  text-align: center;
+  font-style: italic;
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+/* ── Menu items ── */
+.item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+.item:last-child { margin-bottom: 0; }
+
+.item-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 12px;
+}
+
+.item-name {
+   font-family: "Cinzel", serif;
+  font-weight: 500;
+  font-size: 1.2rem;
+  color: var(--ink);
+  flex: 3;
+}
+
+.item-allergens {
+   font-family: "Cinzel", serif;
+  font-weight: 500;
+  font-size: 1.00rem;
+  flex: 1;
+}
+
+.item-allergen-block {
+   font-family: "Cinzel", serif;
+  font-weight: 250;
+  font-size: 0.5rem;
+  color: var(--cream);
+  background-color: var(--gold);
+  flex: 1;
+
+  border-radius: 50%;
+  display: inline-block;
+  text-align: left;
+  vertical-align: middle;
+
+  margin: auto;
+  margin-left: 0em;
+  margin-right: 0.2em;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  padding-left: 8px;
+  padding-right: 8px;
+  text-align: left;
+  background-color: var(--gold);
+}
+
+
+.item-dots {
+  flex: 0;
+  border-bottom: 1px dotted var(--rule);
+  margin: 0 6px 4px;
+  min-width: 20px;
+}
+
+.item-price {
+   font-family: "Cinzel", serif;
+  font-weight: 400;
+  font-size: 0.9rem;
+  color: var(--gold);
+  white-space: nowrap;
+  letter-spacing: 0.04em;
+}
+
+.item-desc {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 2px;
+  line-height: 1.5;
+}
+
+/* Simple list items (no price, no desc) */
+.simple-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px 20px;
+}
+.simple-list li {
+  font-size: 0.97rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.simple-list li::before {
+  content: '—';
+  margin-right: 6px;
+  color: var(--rule);
+}
+
+/* Wine sub-sections */
+.wine-group { margin-bottom: 28px; }
+.wine-group:last-child { margin-bottom: 0; }
+.wine-group-title {
+   font-family: "Cinzel", serif;
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #4a8a94;
+}
+
+/* Side by side price (glass/bottle) */
+.price-dual {
+   font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  white-space: nowrap;
+}
+.price-dual .sep { margin: 0 4px; color: var(--rule); }
+
+/* Sides grid */
+.sides-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 24px;
+}
+.sides-grid span {
+  font-size: 0.97rem;
+  color: var(--muted);
+  font-style: italic;
+}
+.sides-grid span::before { content: '·  '; color: var(--gold); }
+
+/* Footer allergen */
+.allergen {
+  text-align: center;
+   font-family: "Cinzel", serif;
+  font-size: 0.68rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--rule);
+  margin-top: 36px;
+  padding-top: 20px;
+  border-top: 1px solid var(--rule);
+}
+
+@media (max-width: 600px) {
+  .menu-body { padding: 0 18px 32px; }
+  nav a { padding: 12px 12px; font-size: 0.65rem; letter-spacing: 0.1em; }
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+/* Allergen filter */
+.allergens-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.allergens-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  color: var(--gold-light);
+}
+
+.allergens-chevron-icon {
+  width: 14px;
+  height: 9px;
+  transition: transform 0.25s ease;
+}
+
+.site-header--collapsed .allergens-chevron-icon {
+  transform: rotate(-90deg);
+}
+
+.allergen-filter-wrap {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 12px;
+}
+
+.allergen-list-padding {
+  width:10%;
+}
+
+.allergen-filter-list {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  overflow: hidden;
+  transition: height 0.25s ease;
+}
+
+.allergen-filter-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  user-select: none;
+   font-family: "Cinzel", serif;
+  font-size: 0.85rem;
+}
+
+.allergen-filter-item {
+  transition: opacity 0.5s ease, text-decoration 0.5s ease;
+}
+
+.allergen-selected {
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.allergen-reset-btn {
+  flex: 0 0 auto;
+  align-self: center;
+  background: transparent;
+  border: none;
+  color: var(--cream);
+   font-family: "Cinzel", serif;
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: opacity 0.2s ease;
+}
+.site-header--collapsed .allergen-reset-btn {
+  display: none;
+}
