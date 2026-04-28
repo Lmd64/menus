@@ -50,9 +50,14 @@ nav {
   z-index: 100;
   background: var(--ink);
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   gap: 0;
   border-bottom: 2px solid var(--gold);
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
 }
 
 nav a {
@@ -441,6 +446,13 @@ h3 .menu-note {
 @media (max-width: 600px) {
   .menu-body { padding: 0 18px 32px; }
   nav a { padding: 12px 12px; font-size: 0.65rem; letter-spacing: 0.1em; }
+}
+
+.logo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 /* Allergen filter */

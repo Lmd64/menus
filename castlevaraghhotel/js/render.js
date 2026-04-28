@@ -168,10 +168,12 @@ function renderMenus(menus) {
 
   const nav = document.querySelector('nav');
   if (nav) {
-    nav.innerHTML = menus.map(menu => {
-      const label = menu.title.replace(/\s*Menu\s*/gi, '').trim();
-      return `<a href="#${menu.id}">${escapeHTML(label)}</a>`;
-    }).join('');
+    nav.innerHTML = `<div class="nav-links">` +
+      menus.map(menu => {
+        const label = menu.title.replace(/\s*Menu\s*/gi, '').trim();
+        return `<a href="#${menu.id}">${escapeHTML(label)}</a>`;
+      }).join('') +
+      `</div>`;
   }
 
   container.innerHTML = menus.map(menu => {
@@ -193,7 +195,7 @@ function renderMenus(menus) {
 }
 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', 'markdown/menu-allergens.md');
+xhr.open('GET', 'markdown/allergens.md');
 xhr.onload = function () {
   renderMenus(parseMD(xhr.responseText));
   document.dispatchEvent(new Event('menusReady'));
