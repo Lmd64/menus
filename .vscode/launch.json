@@ -1,0 +1,13 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch in Chrome",
+            "url": "http://localhost:8080/index.html",
+            "preLaunchTask": "Start Python HTTP Server",
+            "postDebugTask": "Stop 8080"
+        }
+    ]
+}
