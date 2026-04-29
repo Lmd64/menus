@@ -8,9 +8,7 @@
 
 ### Beverages
 
-- **The Stables Mixed Berry Smoothie** — €3.50
-    - 7
-- **The Stables Freshly Squeezed Orange Juice** — €3.20
+- **Fresh Orange Juice** — €3.20
 - **Apple Juice** — €3.20
 - **Pot of Tea** — €3.20
 - **Herbal Tea** — €3.40
@@ -36,9 +34,9 @@
 - **Nutella & Fresh Strawberries** — €8.95
     - 1 3 7 8
 - **Berry Compote** — €8.95
-    - 1 3 7
+    - 1 3 7 12
 - **Crisp Bacon & Maple Syrup** — €9.95
-    - 1 3 7
+    - 1 3 7 12
 
 ### Breakfast
 
@@ -52,36 +50,32 @@
 
 - **Veggie Breakfast** — €10.95
   2 Poached Eggs, Grilled Tomatoes, Sauté Potatoes, Baked Beans & Mushrooms
-    - 3
+    - 3, 12
 
 - **Mini Irish Breakfast** — €12.95
   Sausage, Crispy Bacon, Black & White Pudding, Oven Roast Tomato, Sauté Mushrooms, Baked Beans & Fried Eggs
-    - 1 3
+    - 1 3 7 10 12
 
 - **Traditional Irish Breakfast** — €14.95
   2 Sausage, 2 Crispy Bacon, Black & White Pudding, Oven Roast Tomato, Sauté Mushrooms, Baked Beans, Hash Brown, Fried Eggs
-    - 1 3
+    - 1 3 7 10 12
 
 ### Healthy Options
 
 - **Granola Jar** — €5.50
   Seasonal Fresh Compote & Nutty Granola Pot
-    - 1 7 8
-
-- **Overnight Oats Jar** — €5.50
-  Flahavan's Oats, Granola, Almond Milk, Flaked Almonds, (Glen)Honey, Topped With Fresh Berries
-    - 1 7 8
+    - 1 6 8
 
 - **Flahavan's Organic Irish Porridge** — €5.50
-  Drizzled with Ringfort Farm Honey & Seasonal Compote
-    - 1 7
+  Drizzled with Honey & Seasonal Compote
+    - 1 7 12
 
 - **Baker's Basket** — €3.00
   White & Brown Bread Toasted, Irish Butter & Marmalade or Raspberry Jam
     - 1 7
 
 - **Seasonal Fruit Salad** — €5.50
-  Natural Yogurt & Ringfort Farm Honey
+  Natural Yogurt & Honey
     - 7
 
 - **Avocado Toast** — €12.20
@@ -104,7 +98,7 @@
 
 - **Kid's Breakfast** — €7.50
   Sausage, Bacon & Fried Eggs
-    - 3
+    - 1 3 7 10 12
 
 -------------------------
 
