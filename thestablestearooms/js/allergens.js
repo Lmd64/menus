@@ -1,6 +1,13 @@
-document.addEventListener("menusReady", () => {
+function initAllergens() {
   const nav = document.querySelector("nav");
-  if (nav) document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
+  function setNavH() {
+    if (nav) document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
+  }
+  setNavH();
+  if (nav) {
+    const logoImg = nav.querySelector("img");
+    if (logoImg && !logoImg.complete) logoImg.addEventListener("load", setNavH);
+  }
   const siteHeaderEl = document.querySelector(".site-header");
   if (siteHeaderEl) document.documentElement.style.setProperty("--allergens-h", siteHeaderEl.offsetHeight + "px");
 
@@ -253,7 +260,7 @@ document.addEventListener("menusReady", () => {
         } else {
           menu.classList.add("menu--collapsed");
           body.style.height = "0";
-          body.style.display = "none";
+          if (document.querySelectorAll(".menu").length > 1) body.style.display = "none";
         }
       });
       requestAnimationFrame(() => {
@@ -317,7 +324,7 @@ document.addEventListener("menusReady", () => {
         body.addEventListener('transitionend', function h(e) {
           if (e.propertyName !== 'height') return;
           body.removeEventListener('transitionend', h);
-          body.style.display = 'none';
+          if (document.querySelectorAll(".menu").length > 1) body.style.display = 'none';
         });
       }
     });
@@ -334,24 +341,39 @@ document.addEventListener("menusReady", () => {
 
     const savedNav = localStorage.getItem(STORAGE_KEY_NAV);
     const savedLink = savedNav ? document.querySelector(`nav a[href="#${savedNav}"]`) : null;
-    document.querySelectorAll(".menu").forEach(menu => {
-      const body = menu.querySelector(".menu-body");
-      if (savedLink && menu.id === savedNav) {
-        menu.classList.remove("menu--collapsed");
-        body.style.display = "";
-        body.style.height = "";
-      } else {
-        menu.classList.add("menu--collapsed");
-        body.style.height = "0";
-        body.style.display = "none";
+    if (document.querySelectorAll(".menu").length > 1) {
+      document.querySelectorAll(".menu").forEach(menu => {
+        const body = menu.querySelector(".menu-body");
+        if (savedLink && menu.id === savedNav) {
+          menu.classList.remove("menu--collapsed");
+          body.style.display = "";
+          body.style.height = "";
+        } else {
+          menu.classList.add("menu--collapsed");
+          body.style.height = "0";
+          body.style.display = "none";
+        }
+      });
+      if (savedLink) {
+        savedLink.classList.add("active");
+        requestAnimationFrame(() => scrollToMenu(savedNav));
       }
-    });
-    if (savedLink) {
-      savedLink.classList.add("active");
-      requestAnimationFrame(() => scrollToMenu(savedNav));
     }
   } catch (_) {}
 
+  const allMenus = document.querySelectorAll(".menu");
+  if (allMenus.length === 1) {
+    const body = allMenus[0].querySelector(".menu-body");
+    allMenus[0].classList.remove("menu--collapsed");
+    if (body) { body.style.display = ""; body.style.height = ""; }
+  }
+
   if (selectedAllergens.size > 0) applyFilter();
   updateResetBtn();
-});
+}
+
+if (document.querySelector('.menu')) {
+  initAllergens();
+} else {
+  document.addEventListener('menusReady', initAllergens, { once: true });
+}

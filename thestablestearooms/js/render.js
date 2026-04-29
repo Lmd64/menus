@@ -166,8 +166,10 @@ function renderMenus(menus) {
   const container = document.querySelector('.menus');
   if (!container) return;
 
+  const single = menus.length === 1;
+
   const nav = document.querySelector('nav');
-  if (nav) {
+  if (nav && !single) {
     const navLinks = document.createElement('div');
     navLinks.className = 'nav-links';
     navLinks.innerHTML = menus.map(menu => {
@@ -181,11 +183,12 @@ function renderMenus(menus) {
     const servedHtml = menu.served ? `<h3 class="menu-note">${escapeHTML(menu.served)}</h3>` : '';
     const noteHtml = menu.note ? `<span class="menu-subnote">${escapeHTML(menu.note)}</span>` : '';
     const sectionsHtml = menu.sections.map(renderSection).join('');
+    const toggleBtn = single ? '' : `<button class="menu-toggle" aria-label="Toggle menu">${menuChevronSvg}</button>`;
     return `<article class="menu" id="${menu.id}">
       <div class="menu-header">
         <div class="menu-title-row">
           <h2>${escapeHTML(menu.title)}</h2>
-          <button class="menu-toggle" aria-label="Toggle menu">${menuChevronSvg}</button>
+          ${toggleBtn}
         </div>
         ${servedHtml}
         ${noteHtml}
