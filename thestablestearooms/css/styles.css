@@ -17,13 +17,16 @@
 }
 
 :root {
+  --inkwell: #242A38;
+  --palegray: #EAEAFA;
+  --white: #FFFFFF;
   --ink: #003b49;
   --cream: #f0e6d8;
   --warm: #e8d5c4;
   --gold: #33626d;
   --gold-light: #506b67;
-  --rule: #7a9da5;
-  --muted: #555;
+  --rule: #7a8da5;
+  --muted: #556789;
   --section-bg: #f8f0e8;
 }
 
@@ -32,9 +35,9 @@
 html { scroll-behavior: smooth; }
 
 body {
-  background: var(--cream);
-  color: var(--ink);
-   font-family: "Cinzel", serif;
+  background: var(--inkwell);
+  color: var(--palegray);
+  font-family: "Cinzel", serif;
   font-size: 17px;
   line-height: 1.7;
 }
@@ -45,11 +48,11 @@ nav {
   top: 0;
   width:100%;
   z-index: 100;
-  background: var(--ink);
+  background: var(--inkwell);
   display: flex;
   flex-direction: column;
   gap: 0;
-  border-bottom: 2px solid var(--gold);
+  /* border-bottom: 2px solid var(--palegray); */
 }
 
 .nav-links {
@@ -58,27 +61,27 @@ nav {
 }
 
 nav a {
-  color: var(--rule);
+  color: var(--palegray);
   text-decoration: none;
-   font-family: "Cinzel", serif;
+  font-family: "Cinzel", serif;
   font-weight: 400;
   font-size: 0.72rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;
   padding: 14px 22px;
   transition: color 0.2s, background 0.2s;
-  border-right: 1px solid #1a4a58;
+  /* border-right: 1px solid #1a4a58; */
 }
-nav a:first-child { border-left: 1px solid #1a4a58; }
-nav a:hover { color: var(--gold-light); background: #1a4a58; }
-nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
+/* nav a:first-child { border-left: 1px solid #1a4a58; } */
+nav a:hover { color: var(--white); background: var(--inkwell); }
+nav a.active { color: var(--palegray); font-weight: 700; background: var(--inkwell); }
 
 /* ── Page header ── */
 .site-header {
   text-align: center;
   padding: 10px 24px 10px;
-  background: var(--ink);
-  color: var(--cream);
+  background: var(--inkwell);
+  color: var(--palegray);
   position: sticky;
   top: var(--nav-h, 44px);
   z-index: 99;
@@ -87,13 +90,12 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
   content: '';
   position: absolute;
   inset: 0;
-  /*background: radial-gradient(ellipse at 50% 120%, #3a3020 0%, transparent 70%);*/
   pointer-events: none;
 }
 .header-ornament {
   display: block;
   font-size: 1.3rem;
-  color: var(--gold);
+  color: var(--palegray);
   letter-spacing: 0.3em;
   margin-bottom: 16px;
    font-family: "Cinzel", serif;
@@ -109,7 +111,7 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
 }
 .site-header .ampersand {
   font-style: italic;
-  color: var(--gold-light);
+  color: var(--palegray);
 }
 .site-header .subtitle {
    font-family: "Cinzel", serif;
@@ -122,7 +124,7 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
 .header-rule {
   width: 80px;
   height: 1px;
-  background: var(--gold);
+  background: var(--inkwell);
   margin: 20px auto 0;
 }
 
@@ -147,21 +149,13 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
 .menu-header {
   text-align: center;
   padding: 20px 24px 20px;
-  border: 1px solid var(--rule);
-  background: var(--ink);
-  color: var(--cream);
+  /* border: 1px solid var(--rule); */
+  background: var(--inkwell);
+  color: var(--palegray);
   position: relative;
   margin-bottom: 0;
 }
 
-.menu-header::before,
-.menu-header::after {
-  content: '◆';
-  color: var(--gold);
-  font-size: 0.55rem;
-  position: absolute;
-  top: 12px;
-}
 .menu-header::before { left: 16px; }
 .menu-header::after  { right: 16px; }
 
@@ -170,7 +164,7 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
   font-size: 0.65rem;
   letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--palegray);
   margin-bottom: 10px;
   display: block;
 }
@@ -225,7 +219,7 @@ h3 .menu-note {
   padding: 8px;
   display: flex;
   align-items: center;
-  color: var(--gold-light);
+  color: var(--palegray);
 }
 .menu-chevron-icon {
   width: 16px;
@@ -237,9 +231,9 @@ h3 .menu-note {
 }
 
 .menu-body {
-  border: 1px solid var(--rule);
+  /* border: 1px solid var(--rule); */
   border-top: none;
-  background: var(--section-bg);
+  background: var(--inkwell);
   padding: 0 36px 40px;
   overflow: hidden;
   transition: height 0.25s ease;
@@ -251,7 +245,7 @@ h3 .menu-note {
 }
 
 .section + .section {
-  border-top: 1px solid var(--rule);
+  /* border-top: 1px solid var(--rule); */
   margin-top: 36px;
   padding-top: 36px;
 }
@@ -263,10 +257,11 @@ h3 .menu-note {
   letter-spacing: 0.05em;
   text-align: center;
   margin-bottom: 6px;
-  color: var(--ink);
+  color: var(--inkwell);
 }
 
 .section-title-rule {
+  color: white;
   display: flex;
   align-items: center;
   font-size: 1.25em;
@@ -281,7 +276,7 @@ h3 .menu-note {
    font-family: "Cinzel", serif;
   font-size: 1.4em;
   font-weight: 600;
-  color: var(--ink);
+  color: var(--palegray);
   white-space: nowrap;
   letter-spacing: 0.04em;
 }
@@ -314,7 +309,7 @@ h3 .menu-note {
    font-family: "Cinzel", serif;
   font-weight: 500;
   font-size: 1.2rem;
-  color: var(--ink);
+  color: var(--palegray);
   flex: 3;
 }
 
@@ -326,11 +321,11 @@ h3 .menu-note {
 }
 
 .item-allergen-block {
-   font-family: "Cinzel", serif;
+  font-family: "Cinzel", serif;
   font-weight: 250;
-  font-size: 0.5rem;
-  color: var(--cream);
-  background-color: var(--gold);
+  font-size: 0.7rem;
+  color: var(--palegray);
+  background: var(--inkwell);
   flex: 1;
 
   border-radius: 50%;
@@ -340,19 +335,19 @@ h3 .menu-note {
 
   margin: auto;
   margin-left: 0em;
-  margin-right: 0.2em;
+  margin-right: 0.0em;
   padding-top: 2px;
   padding-bottom: 2px;
   padding-left: 8px;
   padding-right: 8px;
   text-align: left;
-  background-color: var(--gold);
+  background: var(--inkwell);
 }
 
 
 .item-dots {
   flex: 0;
-  border-bottom: 1px dotted var(--rule);
+  /* border-bottom: 1px dotted var(--rule); */
   margin: 0 6px 4px;
   min-width: 20px;
 }
@@ -361,7 +356,7 @@ h3 .menu-note {
    font-family: "Cinzel", serif;
   font-weight: 400;
   font-size: 0.9rem;
-  color: var(--gold);
+  color: var(--palegray);
   white-space: nowrap;
   letter-spacing: 0.04em;
 }
@@ -386,9 +381,9 @@ h3 .menu-note {
   font-style: italic;
 }
 .simple-list li::before {
-  content: '—';
+  /* content: '—';
   margin-right: 6px;
-  color: var(--rule);
+  color: var(--rule); */
 }
 
 /* Wine sub-sections */
@@ -399,10 +394,10 @@ h3 .menu-note {
   font-size: 0.65rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--palegray);
   margin-bottom: 14px;
   padding-bottom: 6px;
-  border-bottom: 1px solid #4a8a94;
+  /* border-bottom: 1px solid #4a8a94; */
 }
 
 /* Side by side price (glass/bottle) */
@@ -425,7 +420,7 @@ h3 .menu-note {
   color: var(--muted);
   font-style: italic;
 }
-.sides-grid span::before { content: '·  '; color: var(--gold); }
+.sides-grid span::before { content: '·  '; color: var(--palegray); }
 
 /* Footer allergen */
 .allergen {
@@ -437,7 +432,7 @@ h3 .menu-note {
   color: var(--rule);
   margin-top: 36px;
   padding-top: 20px;
-  border-top: 1px solid var(--rule);
+  /* border-top: 1px solid var(--rule); */
 }
 
 @media (max-width: 600px) {
@@ -467,7 +462,7 @@ h3 .menu-note {
   padding: 6px;
   display: flex;
   align-items: center;
-  color: var(--gold-light);
+  color: var(--palegray);
 }
 
 .allergens-chevron-icon {
@@ -526,7 +521,7 @@ h3 .menu-note {
   align-self: center;
   background: transparent;
   border: none;
-  color: var(--cream);
+  color: var(--palegray);
    font-family: "Cinzel", serif;
   font-size: 1.2rem;
   font-weight: 800;

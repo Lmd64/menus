@@ -157,14 +157,6 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
   margin-bottom: 0;
 }
 
-.menu-header::before,
-.menu-header::after {
-  content: '◆';
-  color: var(--gold);
-  font-size: 0.55rem;
-  position: absolute;
-  top: 12px;
-}
 .menu-header::before { left: 16px; }
 .menu-header::after  { right: 16px; }
 
