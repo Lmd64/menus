@@ -4,8 +4,7 @@
 
 ## The Stables Tea Rooms Menu
 
-##### Open from 9:00am to 17:00
-##### Thursday to Sunday, & Bank Holidays
+##### Open from 9:00am to 17:00 - Thursday to Sunday, & Bank Holidays
 
 ### Breakfast
 
