@@ -1,6 +1,8 @@
 document.addEventListener("menusReady", () => {
   const nav = document.querySelector("nav");
   if (nav) document.documentElement.style.setProperty("--nav-h", nav.offsetHeight + "px");
+  const siteHeaderEl = document.querySelector(".site-header");
+  if (siteHeaderEl) document.documentElement.style.setProperty("--allergens-h", siteHeaderEl.offsetHeight + "px");
 
   const allergenToggle = document.querySelector(".allergens-toggle");
   const allergenList = document.querySelector(".allergen-filter-list");
@@ -144,7 +146,7 @@ document.addEventListener("menusReady", () => {
   function scrollToMenu(id) {
     const target = document.getElementById(id);
     if (!target) return;
-    const stickyOffset = [...document.querySelectorAll("nav, .site-header")]
+    const stickyOffset = [...document.querySelectorAll("nav")]
       .reduce((h, el) => h + el.offsetHeight, 0);
     const top = target.getBoundingClientRect().top + window.scrollY - stickyOffset;
     window.scrollTo({ top: Math.max(0, top), behavior: "smooth" });

@@ -82,8 +82,10 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
   padding: 10px 24px 10px;
   background: var(--ink);
   color: var(--cream);
-  position: sticky;
-  top: var(--nav-h, 44px);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
   z-index: 99;
 }
 .site-header::before {
@@ -133,13 +135,17 @@ nav a.active { color: var(--cream); font-weight: 700; background: #1a4a58; }
 .menus {
   max-width: 860px;
   margin: 0 auto;
-  padding: 0 20px 80px;
+  padding: var(--nav-h, 44px) 20px var(--allergens-h, 150px);
 }
 
 /* ── Individual menu ── */
 .menu {
   margin-top: 70px;
   animation: fadeUp 0.5s ease both;
+}
+
+.menu:first-child {
+  margin-top: 0;
 }
 
 @keyframes fadeUp {

@@ -168,12 +168,13 @@ function renderMenus(menus) {
 
   const nav = document.querySelector('nav');
   if (nav) {
-    nav.innerHTML = `<div class="nav-links">` +
-      menus.map(menu => {
-        const label = menu.title.replace(/\s*Menu\s*/gi, '').trim();
-        return `<a href="#${menu.id}">${escapeHTML(label)}</a>`;
-      }).join('') +
-      `</div>`;
+    const navLinks = document.createElement('div');
+    navLinks.className = 'nav-links';
+    navLinks.innerHTML = menus.map(menu => {
+      const label = menu.title.replace(/\s*Menu\s*/gi, '').trim();
+      return `<a href="#${menu.id}">${escapeHTML(label)}</a>`;
+    }).join('');
+    nav.appendChild(navLinks);
   }
 
   container.innerHTML = menus.map(menu => {
