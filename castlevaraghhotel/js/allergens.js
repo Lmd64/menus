@@ -32,6 +32,10 @@ function initAllergens() {
         siteHeader.classList.add("site-header--collapsed");
       }
     });
+
+    allergenList.style.height = "0";
+    siteHeader.classList.add("site-header--collapsed");
+    document.documentElement.style.setProperty("--allergens-h", siteHeader.offsetHeight + "px");
   }
 
   // Render allergen blocks inside menu items
