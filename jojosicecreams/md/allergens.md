@@ -2,7 +2,7 @@
 
 1 Milk 2 Eggs 3 Gluten (Wheat) 4 Soy 5 Sulphites
 
-## JoJo's Ice Creams Menu
+## Menu
 
 ##### Open from 9:00am to 17:00 - Thursday to Sunday, & Bank Holidays
 ##### While every care is taken during production, we cannot guarantee that any of our ice creams or toppings are completely free from nuts or traces of nuts, as they may be present in the production environment.

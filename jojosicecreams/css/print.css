@@ -1,0 +1,116 @@
+@media print {
+  :root {
+    --ink: black;
+    --cream: white;
+    --warm: white;
+    --gold: black;
+    --gold-light: black;
+    --rule: black;
+    --muted: black;
+    --section-bg: white;
+    --inkwell: white;
+    --palegray: black;
+  }
+
+  body {
+    background: white;
+    color: black;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .menus {
+    order: 1;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .site-header {
+    order: 2;
+    position: static;
+    background: white;
+    color: black;
+    border-bottom: 1px solid black;
+  }
+
+  .allergen-filter-list {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .allergens-toggle {
+    display: none;
+  }
+
+  .menus {
+    padding: 0 20px;
+  }
+
+  .menu + .menu {
+    break-before: page;
+  }
+
+  .menu {
+    animation: none;
+    break-inside: avoid;
+    margin-top: 40px;
+  }
+
+  .menu-toggle {
+    display: none;
+  }
+
+  .menu-header {
+    background: white;
+    color: black;
+    border: 1px solid black;
+  }
+
+  .menu-body {
+    background: white;
+    border: 1px solid black;
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .menu--collapsed .menu-body {
+    height: auto !important;
+    overflow: visible !important;
+  }
+
+  .section + .section {
+    border-top-color: black;
+  }
+
+  .section-title-rule {
+    color: black;
+  }
+
+  .section-title-rule .title-line {
+    background: black;
+  }
+
+  .item-allergen-block {
+    color: black;
+    background: white !important;
+    border: 1px solid black;
+  }
+
+  .wine-group-title {
+    border-bottom-color: black;
+  }
+
+  .simple-list li::before,
+  .sides-grid span::before {
+    color: black;
+  }
+
+  .allergen {
+    border-top-color: black;
+  }
+}
