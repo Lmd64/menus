@@ -10,21 +10,21 @@
 ### Ice Creams
 
 - **Vanilla Ice Cream**
-    - 1, 2
+    - 1 2
 - **Mint Chocolate Ice Cream**
-    - 1, 2, 4
+    - 1 2, 4
 - **Strawberry Ice Cream**
-    - 1, 2
+    - 1 2
 - **Chocolate Ice Cream**
-    - 1, 2, 4
+    - 1 2 4
 - **White Chocolate & Wild Berry Ice Cream**
-    - 1, 2, 4
+    - 1 2 4
 - **Raspberry & Prosecco Ice Cream**
-    - 1, 2, 5
+    - 1 2 5
 - **Waffle Cones**
-    - 1, 2, 3
+    - 1 2 3
 - **Chocolate Flake**
-    - 1, 4
+    - 1 4
 - **Marshmallows**
     - 
 - **Sprinkles**
